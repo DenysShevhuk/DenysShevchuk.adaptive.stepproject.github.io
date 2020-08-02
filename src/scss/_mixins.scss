@@ -1,0 +1,7 @@
+@mixin fontFamilyLato () {
+font-family: "Lato", serif;
+}
+
+@mixin animate {
+    transition: all .3s ease-out;
+}

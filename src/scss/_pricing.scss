@@ -1,0 +1,171 @@
+@import "vars";
+@import "mixins";
+.pricing {
+  background-color:$backgroundPrixing;
+}
+.container_pricing {
+  @include fontFamilyLato;
+  &_h{
+    font-size: 31px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 72px;
+    padding-bottom: 53px;
+  }
+  &_sections{
+    background-color: #5F5161;
+    width: 257px;
+    height: 457px;
+    margin: 14px auto;
+
+  }
+  &_name{
+    font-size: 23px;
+    color: white;
+    width: 257px;
+    height: 97px;
+    background-color: #685B6A;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.6em 0;
+    @include fontFamilyLato;
+  }
+  &_cost {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    @include fontFamilyLato;
+  }
+  &_term{
+    color: #FFFFFF;
+    opacity: 0.3;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-bottom: 39px;
+    @include fontFamilyLato;
+  }
+  &_hr{
+    width: 60px;
+    height: 2px;
+    color: #8D81AC;
+    opacity: 0.5;
+  }
+  &_license{
+    color: white;
+    width: 65%;
+    font-size: 14px;
+    opacity: 0.8;
+    padding-top: 31px;
+    @include fontFamilyLato;
+    margin: 0 auto;
+  }
+
+  &_btn{
+    margin-top: 55px;
+  }
+}
+
+
+.container_pricing_sections_hover{
+  width: 290px;
+  height: 560px;
+  margin: 0 auto;
+  background-color: #413344;
+}
+.container_pricing_name_hover {
+  background-color: #3A2D3D;
+  width: 290px;
+  height: 111px;
+  color: white;
+  font-size: 23px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2em 0;
+  @include fontFamilyLato;
+}
+
+.container_pricing_cost_hover {
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  @include fontFamilyLato;
+}
+.container_pricing_btn_hover{
+  margin-top: 90px;
+}
+.pricing_btn_hover {
+  font-size: 16px;
+  background-color: #776B79;
+  border-radius: 50px;
+  border: 1px solid #776B79;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 1em 4em;
+  @include fontFamilyLato;
+  @include animate;
+  outline: none;
+  &:hover{
+    background-color: #D2CCD0;
+    color: #7F6D78;
+  }
+}
+.pricing_btn {
+  font-size: 14px;
+  background-color: #776B79;
+  border-radius: 50px;
+  border: 1px solid #776B79;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 0.89em 3em;
+  @include fontFamilyLato;
+  @include animate;
+  outline: none;
+
+  &:hover{
+    background-color: #D2CCD0;
+    color: #7F6D78;
+  }
+}
+
+@media (min-width: 481px) {
+
+  .container_pricing {
+    font-family: "Lato", serif;
+  }
+  &_h {
+    font-size: 41px;
+    padding-bottom: 47px;
+  }
+
+  .pricing_flex {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .pricing_rab {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px auto;
+    justify-content: center;
+  }
+
+  .container_pricing_sections {
+    margin: 15px;
+
+  }
+}
+
+@media (min-width: 993px) {
+
+  .pricing_flex {
+    display: flex;
+    justify-content: space-around;
+
+  }
+}
+

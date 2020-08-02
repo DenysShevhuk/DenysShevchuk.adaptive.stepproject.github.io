@@ -1,0 +1,122 @@
+@import "mixins";
+@import "vars";
+
+.testimonial {
+    width: 100%;
+    background-color: $baseColor;
+    background-image: url(../img/testmonials-bg.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+
+    padding-bottom: 73px;
+
+    &_title {
+        color: #fff;
+        padding-top: 63px;
+        margin-bottom: 49px;
+
+    }
+
+    &__comments {
+        display: flex;
+        flex-direction: column;
+        @include animate;
+    }
+
+    &__description {
+        display: none;
+    }
+}
+
+.comment {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &__logo {
+        margin-bottom: 36px;
+    }
+
+    &__text {
+        @include fontFamilyLato;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        color: #fff;
+
+        padding: 0 20px;
+    }
+
+
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+@media (min-width: 590px) {
+    .testimonial {
+
+        &__comments {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 75px;
+        }
+
+        &__description {
+            display: block;
+            margin: 0 auto 10px;
+            @include fontFamilyLato;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: #a291a5;
+        }
+    }
+
+    .comment {
+        flex: 1 1 50%;
+
+
+        &__logo {
+            height: 65px;
+            line-height: 65px;
+        }
+
+    }
+
+
+}
+
+@media (min-width: 993px) {
+    .comments {
+        margin-bottom: 120px;
+    }
+
+    .testimonial {
+
+        background-size: 100%;
+
+        &__description {
+            width: 60%;
+        }
+    }
+
+    .comment {
+        max-width: 33%;
+        margin-bottom: 110px;
+    }
+
+    .line {
+        width: 50%;
+    }
+}
